@@ -1,0 +1,50 @@
+
+
+<% if user_signed_in? %>
+
+  <table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Twitter</th>
+        <th> </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @contacts.each do |contact| %>
+        <% if contact.user == current_user %>
+        <tr>
+          <td>
+<%= link_to contact.first_name + ' ' + contact.last_name, contact %>
+
+
+          </td>
+          
+          <td><%= contact.email %></td>
+          <td><%= contact.phone %></td>
+          <td><%= contact.twitter %></td>
+          
+          
+          
+          
+          
+          <td><%= link_to 'Delete', contact, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+          
+        </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Friend', new_friend_path, class:"btn btn-secondary" %>
+<% else %>
+
+<h1>Hello World!</h1>
+Welcome to my first Ruby on Rails Webpage!
+
+<% end %>
