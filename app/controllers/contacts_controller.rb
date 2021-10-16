@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
   
   def new
     
-    @friend = current_user.contacts.build
+    @contact = current_user.contacts.build
   end
 
 
@@ -71,7 +71,7 @@ class ContactsController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    def friend_params
+    def contact_params
       params.require(:contact).permit(:first_name, :last_name, :email, :phone, :twitter, :user_id)
     end
 end
