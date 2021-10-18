@@ -2,7 +2,9 @@
 
 Hello there,
 
-This is a Ruby on Rails Contacts List Web application
+This is a Ruby on Rails Contacts List Web application.
+After successfully signing up one can create a list of contacts that are available 
+anywhere on the go.
 
 ## dependencies
 
