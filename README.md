@@ -25,5 +25,5 @@ anywhere on the go.
 - 'capybara', '>= 2.15'
 - 'selenium-webdriver'
 
-[ Try out my Web App hosted on Heroku !!](https://rail-contact.herokuapp.com/)
+[ Try out the Web App hosted on Heroku !!](https://rail-contact.herokuapp.com/)
 
