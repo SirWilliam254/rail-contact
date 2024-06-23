@@ -9,7 +9,6 @@ class FriendsTest < ApplicationSystemTestCase
     visit friends_url
     assert_selector "h1", text: "Friends"
   end
-
   test "creating a Friend" do
     visit friends_url
     click_on "New Friend"
